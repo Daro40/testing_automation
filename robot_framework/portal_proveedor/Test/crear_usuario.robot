@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation  Crear un usuario y asociarlo a un proveedor
 Resource  ../Recursos/usuario.robot
-Test setup  Being testing
+Test Setup  Being testing
 Test Teardown  stop testing
 
 *** Variables ***

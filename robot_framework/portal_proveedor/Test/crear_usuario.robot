@@ -1,6 +1,8 @@
 *** Settings ***
 Documentation  Crear un usuario y asociarlo a un proveedor
 Resource  ../Recursos/usuario.robot
+Test setup  Being testing
+Test Teardown  stop testing
 
 *** Variables ***
 ${LOGIN URL}  http://laila.siu.edu.ar:8286/siu/huarpe/app_dev.php
@@ -12,7 +14,7 @@ ${password}  toba123*-a
 Crear un usuario y asociarlo a un proveedor
     [Documentation]  Debemos loguearnos con admin_proveedor y crear un nuevo usuario
     [Tags]  Smoke
-    usuario.Abrir pagina
+    usuario.Abrir Browser
     usuario.Login    admin_proveedor    toba123*-a
     sleep  3s
     usuario.Desplegar administrador
